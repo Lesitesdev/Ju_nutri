@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutricionista Juliana Nascimento</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800">
+
+<!-- Header -->
+<header class="fixed top-0 w-full bg-green-600 shadow z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4 text-white">
+    <h1 class="text-xl font-bold">Juliana Nascimento</h1>
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="#sobre" class="hover:text-green-200">Sobre</a></li>
+        <li><a href="#servicos" class="hover:text-green-200">Serviços</a></li>
+        <li><a href="#depoimentos" class="hover:text-green-200">Depoimentos</a></li>
+        <li><a href="#faq" class="hover:text-green-200">Informações Úteis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Seção Hero com slider responsivo -->
+<section class="relative w-full h-screen overflow-hidden text-white flex flex-col justify-center items-center">
+
+  <!-- Slides -->
+  <div class="hero-slide w-full h-full relative">
+
+<!-- Slide 1 – Verde Saudável -->
+<div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-1 bg-cover bg-center"
+     style="background-image: linear-gradient(to right, rgba(34,197,94,0.7), rgba(16,185,129,0.7)), url('img/frutas-frescas.jpg');">
+  <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl text-white">
+    Alcance seus objetivos com uma alimentação saudável
+  </h2>
+  <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center text-white">
+    Consultoria nutricional personalizada para emagrecimento, saúde e bem-estar.
+  </p>
+  <a href="https://wa.me/5511999999999" target="_blank"
+     class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
+    Fale no WhatsApp
+  </a>
+</div>
+
+<!-- Slide 2 – Energia e Atividade Física -->
+<div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center"
+     style="background-image: linear-gradient(to right, rgba(249,115,22,0.7), rgba(251,191,36,0.7)), url('img/yoga-bg.jpg');">
+  <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl text-white">
+    Transforme sua alimentação e sua vida ativa
+  </h2>
+  <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center text-white">
+    Programas nutricionais adaptados ao seu estilo de vida e desempenho físico.
+  </p>
+  <a href="https://wa.me/5511999999999" target="_blank"
+     class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
+    Fale no WhatsApp
+  </a>
+</div>
+
+<!-- Slide 3 – Equilíbrio e Bem-Estar -->
+<div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center"
+     style="background-image: linear-gradient(to right, rgba(59,130,246,0.6), rgba(129,140,248,0.6)), url('img/natureza-bg.jpg');">
+  <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl text-white">
+    Alcance o equilíbrio alimentar e emocional
+  </h2>
+  <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center text-white">
+    Acompanhamento contínuo para resultados duradouros e hábitos sustentáveis.
+  </p>
+  <a href="https://wa.me/5511999999999" target="_blank"
+     class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
+    Fale no WhatsApp
+  </a>
+</div>
+
+
+  </div>
+
+  <!-- Bolinhas de navegação -->
+  <div class="absolute bottom-10 flex space-x-3">
+    <button class="dot w-4 h-4 rounded-full bg-white opacity-100 hover:opacity-100 transition"></button>
+    <button class="dot w-4 h-4 rounded-full bg-white opacity-50 hover:opacity-100 transition"></button>
+    <button class="dot w-4 h-4 rounded-full bg-white opacity-50 hover:opacity-100 transition"></button>
+  </div>
+
+</section>
+
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = (i === index) ? '1' : '0';
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('opacity-100', i === index);
+      dot.classList.toggle('opacity-50', i !== index);
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      current = i;
+      showSlide(current);
+    });
+  });
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  showSlide(current);
+  setInterval(nextSlide, 5000); // troca automática a cada 5 segundos
+</script>
+
+
+<!-- Sobre -->
+<section id="sobre" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <img src="img/Capturar.JPG" alt="Nutricionista" class="w-64 h-64 rounded-full shadow-lg" data-aos="fade-right">
+    <div data-aos="fade-left">
+      <h3 class="text-3xl font-bold mb-4">Sobre a Nutricionista</h3>
+      <p class="mb-4">Formada em Nutrição, especializada em emagrecimento, nutrição clínica e esportiva, ajudando pessoas a conquistarem hábitos saudáveis de forma prática e sustentável.</p>
+      <p>Atendimento online e presencial, com acompanhamento semanal e plano alimentar personalizado.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Serviços -->
+<section id="servicos" class="py-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">Serviços</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+        <span class="text-4xl">🏥</span>
+        <h4 class="text-xl font-semibold mt-4">Consultas Online</h4>
+        <p class="mt-2 text-gray-600">Atendimento personalizado sem sair de casa, com acompanhamento contínuo.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+        <span class="text-4xl">📄</span>
+        <h4 class="text-xl font-semibold mt-4">Planos Alimentares</h4>
+        <p class="mt-2 text-gray-600">Cardápios ajustados ao seu perfil, objetivos e estilo de vida.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+        <span class="text-4xl">💪</span>
+        <h4 class="text-xl font-semibold mt-4">Acompanhamento Nutricional</h4>
+        <p class="mt-2 text-gray-600">Monitoramento de resultados, ajustes de dieta e dicas práticas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Local de Atendimento -->
+<section id="local-atendimento" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">Local de Atendimento</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Endereço 1 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+        <span class="text-4xl">🏥</span>
+        <h4 class="text-xl font-semibold mt-4">Clínica Saúde e Bem-Estar</h4>
+        <p class="mt-2 text-gray-600">Rua das Flores, 123 – Centro, São Paulo/SP</p>
+        <p class="mt-2 text-gray-600">Segunda a Sexta, das 9h às 18h</p>
+      </div>
+
+      <!-- Endereço 2 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+        <span class="text-4xl">🏥</span>
+        <h4 class="text-xl font-semibold mt-4">Consultório Vida Saudável</h4>
+        <p class="mt-2 text-gray-600">Av. das Palmeiras, 456 – Jardim das Acácias, São Paulo/SP</p>
+        <p class="mt-2 text-gray-600">Segunda a Sexta, das 10h às 19h</p>
+      </div>
+
+      <!-- Atendimento Online -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+        <span class="text-4xl">💻</span>
+        <h4 class="text-xl font-semibold mt-4">Atendimento Online</h4>
+        <p class="mt-2 text-gray-600">Consultas via videochamada pelo WhatsApp ou Zoom.</p>
+        <p class="mt-2 text-gray-600">Agendamento flexível de segunda a sábado.</p>
+        <a href="https://wa.me/5511999999999" target="_blank" class="mt-4 inline-block bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-500 transition">
+          Agendar Online
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Depoimentos -->
+<section id="depoimentos" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">O que dizem meus clientes</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <a href="https://www.instagram.com/juliananb.nutri/" target="_blank" class="p-6 bg-white rounded-xl shadow block hover:shadow-lg transition" data-aos="zoom-in">
+        <img src="img/cliente1.jpg" alt="Cliente 1" class="w-20 h-20 mx-auto rounded-full mb-4">
+        <p class="italic">"Melhorei minha alimentação e perdi peso com acompanhamento da Juliana!"</p>
+        <h4 class="mt-4 font-semibold">cliente1 ⭐⭐⭐⭐⭐</h4>
+      </a>
+
+      <a href="https://www.instagram.com/juliananb.nutri/" target="_blank" class="p-6 bg-white rounded-xl shadow block hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/cliente2.jpg" alt="Cliente 2" class="w-20 h-20 mx-auto rounded-full mb-4">
+        <p class="italic">"Consultoria incrível, cardápios deliciosos e fáceis de seguir."</p>
+        <h4 class="mt-4 font-semibold">cliente2 ⭐⭐⭐⭐⭐</h4>
+      </a>
+
+      <a href="https://www.instagram.com/juliananb.nutri/" target="_blank" class="p-6 bg-white rounded-xl shadow block hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/cliente3.jpg" alt="Cliente 3" class="w-20 h-20 mx-auto rounded-full mb-4">
+        <p class="italic">"Recomendo demais, acompanhamento personalizado e excelente suporte."</p>
+        <h4 class="mt-4 font-semibold">cliente3 ⭐⭐⭐⭐⭐</h4>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20">
+  <div class="max-w-4xl mx-auto">
+    <h3 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Perguntas Frequentes</h3>
+    <div class="space-y-4">
+      <div class="border rounded-lg" data-aos="fade-up">
+        <button class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center faq-btn">Quanto dura uma consulta? <span>+</span></button>
+        <div class="hidden px-4 pb-4 text-gray-600">Geralmente 50 minutos a 1 hora, dependendo do atendimento.</div>
+      </div>
+      <div class="border rounded-lg" data-aos="fade-up" data-aos-delay="200">
+        <button class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center faq-btn">É possível atendimento online? <span>+</span></button>
+        <div class="hidden px-4 pb-4 text-gray-600">Sim, realizamos consultas via vídeo chamada ou telefone.</div>
+      </div>
+      <div class="border rounded-lg" data-aos="fade-up" data-aos-delay="400">
+        <button class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center faq-btn">Vocês oferecem suporte? <span>+</span></button>
+        <div class="hidden px-4 pb-4 text-gray-600">Sim, atendimento via WhatsApp para tirar dúvidas entre consultas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer class="bg-green-600 text-white py-10">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+    <div>
+      <h4 class="font-bold text-lg mb-4">Juliana Nascimento</h4>
+      <p>Consultoria nutricional e soluções personalizadas para você.</p>
+    </div>
+    <div>
+      <h4 class="font-bold text-lg mb-4">Links</h4>
+      <ul>
+        <li><a href="#sobre" class="hover:text-green-200">Sobre</a></li>
+        <li><a href="#servicos" class="hover:text-green-200">Serviços</a></li>
+        <li><a href="#depoimentos" class="hover:text-green-200">Depoimentos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-lg mb-4">Contato</h4>
+      <p>Email: juliana.nascimento@gmail.com</p>
+      <p>WhatsApp: (11) 99999-9999</p>
+      <p>Instagram: <a href="https://www.instagram.com/juliananb.nutri/" target="_blank" class="underline hover:text-green-200">@juliananb.nutri</a></p>
+    </div>
+  </div>
+  <div class="text-center mt-8 text-green-100">© 2025 Juliana Nascimento. Todos os direitos reservados.</div>
+</footer>
+
+<!-- Botão WhatsApp flutuante -->
+<a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Estou%20interessado%20em%20agendar%20uma%20consulta%20nutricional%20com%20a%20Juliana%20Nascimento." 
+   target="_blank" 
+   class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition">
+  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-5 h-5">
+</a>
+
+<!-- Botão Instagram flutuante -->
+<a href="https://www.instagram.com/juliananb.nutri/" target="_blank"
+   class="fixed bottom-20 right-6 bg-pink-500 p-4 rounded-full shadow-lg hover:scale-110 transition">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="w-5 h-5">
+</a>
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  document.querySelectorAll(".faq-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      content.classList.toggle("hidden");
+    });
+  });
+</script>
+
+</body>
+</html>
