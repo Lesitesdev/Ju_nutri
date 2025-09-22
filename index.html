@@ -41,7 +41,7 @@
         <li><a href="#servicos" class="hover:text-green-300 transition">Serviços</a></li>
         <li><a href="#blog" class="hover:text-green-300 transition">Blog</a></li>
         <li><a href="#depoimentos" class="hover:text-green-300 transition">Depoimentos</a></li>
-        <li><a href="#contato" class="hover:text-green-300 transition">Contato</a></li>
+        <li><a href="#contato" class="hover:text-green-300 transition">Contatos</a></li>
       </ul>
     </nav>
   </div>
@@ -100,6 +100,61 @@
         <button class="dot w-4 h-4 rounded-full bg-white opacity-50 transition"></button>
     </div>
 </section>
+
+
+<section class="bg-green-100 py-12 mt-20">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-extrabold text-green-800 mb-4">
+      🌟 Promoção Imperdível! 🌟
+    </h2>
+    <p class="text-lg mb-6 leading-relaxed">
+      Aproveite esta oportunidade única e agende sua <strong>consulta especial</strong> 
+      com preço reduzido por tempo limitado.<br>
+      De <span class="line-through text-red-500 font-semibold">R$160,00</span> 
+      por apenas <span class="text-green-700 font-extrabold text-3xl">R$140,00</span>!
+    </p>
+
+    <!-- Cronômetro -->
+    <div class="bg-white shadow-md rounded-xl p-6 inline-block">
+      <p class="text-lg font-semibold text-gray-700 mb-2">
+        ⏳ Corra! Essa oferta expira em:
+      </p>
+      <div id="contador" class="text-4xl font-bold text-green-700">-- dias</div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<script>
+  // Defina aqui quantos dias dura a promoção
+  const diasPromocao = 7; 
+  let diasRestantes = diasPromocao;
+
+  const contadorEl = document.getElementById("contador");
+
+  function atualizarContador() {
+    contadorEl.textContent = diasRestantes + " dias";
+
+    diasRestantes--;
+
+    if (diasRestantes < 0) {
+      diasRestantes = diasPromocao; // Reinicia quando chega a 0
+    }
+  }
+
+  // Atualiza imediatamente ao carregar
+  atualizarContador();
+
+  // Atualiza a cada 24h (1 dia = 86400000 ms)
+  setInterval(atualizarContador, 86400000); 
+
+  // Para testar mais rápido (a cada 3s em vez de 1 dia), troque a linha de cima por:
+  // setInterval(atualizarContador, 3000);
+</script>
+
+
+
 
 <section id="sobre" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
@@ -201,8 +256,6 @@
     </div>
 </section>
 
-
-
 <section id="faq" class="py-20 bg-gray-100">
   <div class="max-w-4xl mx-auto px-6">
     <h3 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">
@@ -215,15 +268,20 @@
         <summary
           class="cursor-pointer px-6 py-4 font-semibold text-lg flex justify-between items-center list-none"
         >
-          Qual o valor da consulta?
+          Quanto custa a consulta e quais formas de pagamento aceitam?
           <i
             class="fas fa-chevron-down text-sm transition-transform duration-300 group-open:rotate-180"
           ></i>
         </summary>
         <div class="px-6 pb-4 text-gray-600">
-          O valor da consulta varia de acordo com o plano de acompanhamento
-          escolhido. Entre em contato pelo WhatsApp para saber mais sobre as opções
-          disponíveis.
+  Esse valor dá direito a <strong>uma consulta</strong> e um 
+  <strong>retorno agendado para 30 dias</strong>.<br><br>
+  O valor pode variar de acordo com o <strong>plano de acompanhamento escolhido</strong>.<br>
+  Trabalhamos com diferentes pacotes e condições acessíveis.<br>
+  Aceitamos pagamentos via <strong>PIX, cartão de crédito e  débito</strong>.<br>
+  
+</div>
+
         </div>
       </details>
 
@@ -236,15 +294,16 @@
         <summary
           class="cursor-pointer px-6 py-4 font-semibold text-lg flex justify-between items-center list-none"
         >
-          É possível ter atendimento online?
+          O atendimento pode ser feito online? Funciona tão bem quanto o presencial?
           <i
             class="fas fa-chevron-down text-sm transition-transform duration-300 group-open:rotate-180"
           ></i>
         </summary>
         <div class="px-6 pb-4 text-gray-600">
-          Sim, realizo consultas online por videochamada. O acompanhamento é tão
-          completo quanto o presencial, com todas as etapas necessárias para o seu
-          sucesso.
+          Sim! Realizo consultas online por videochamada, com a mesma atenção e 
+          qualidade do atendimento presencial. Você terá acesso a orientações 
+          personalizadas, plano alimentar completo e acompanhamento contínuo, 
+          sem sair de casa.
         </div>
       </details>
 
@@ -257,17 +316,42 @@
         <summary
           class="cursor-pointer px-6 py-4 font-semibold text-lg flex justify-between items-center list-none"
         >
-          Quanto tempo dura a consulta?
+          Quanto tempo dura cada consulta e como funciona o acompanhamento?
           <i
             class="fas fa-chevron-down text-sm transition-transform duration-300 group-open:rotate-180"
           ></i>
         </summary>
         <div class="px-6 pb-4 text-gray-600">
-          A primeira consulta tem uma duração média de 1 hora, enquanto as de
-          retorno duram cerca de 30 a 40 minutos, para que possamos avaliar o
-          progresso e fazer ajustes.
+          A primeira consulta dura em média 1 hora, onde será feita a avaliação 
+          completa do seu histórico, hábitos e metas. As consultas de retorno 
+          levam entre 30 a 40 minutos, para revisar o progresso, ajustar o plano 
+          alimentar e esclarecer dúvidas. O acompanhamento é contínuo e 
+          totalmente adaptado às suas necessidades.
         </div>
       </details>
+
+      <!-- FAQ Extra -->
+      <details
+        class="bg-white border rounded-lg shadow group"
+        data-aos="fade-up"
+        data-aos-delay="600"
+      >
+        <summary
+          class="cursor-pointer px-6 py-4 font-semibold text-lg flex justify-between items-center list-none"
+        >
+          Preciso de algum preparo antes da consulta?
+          <i
+            class="fas fa-chevron-down text-sm transition-transform duration-300 group-open:rotate-180"
+          ></i>
+        </summary>
+        <div class="px-6 pb-4 text-gray-600">
+          Não há necessidade de jejum ou exames prévios obrigatórios. 
+          Se já possuir exames laboratoriais recentes, traga-os para enriquecer 
+          a avaliação. O mais importante é estar disposto a compartilhar sua 
+          rotina e objetivos para que possamos traçar o melhor plano para você.
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
@@ -318,54 +402,65 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
     <!-- Unidade 1 -->
-    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up">
-      <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
-      <h4 class="font-bold text-xl mb-2">São Paulo - Centro</h4>
-      <p class="text-gray-700 mb-2">Rua das Flores, 123</p>
-      <p class="text-gray-700 mb-4">São Paulo/SP</p>
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition flex flex-col justify-between h-full" data-aos="fade-up">
+      <div>
+        <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
+        <h4 class="font-bold text-xl mb-2">Francisco Morato - SP</h4>
+        <p class="text-gray-700 mb-2">Av. São Paulo, 1801 - Parque Paulista</p>
+        <p class="text-gray-700 mb-4">07846-000</p>
+      </div>
       <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
-        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
+        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center justify-center space-x-2 mt-4">
         <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
       </a>
     </div>
 
     <!-- Unidade 2 -->
-    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
-      <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
-      <h4 class="font-bold text-xl mb-2">Campinas</h4>
-      <p class="text-gray-700 mb-2">Av. Brasil, 456</p>
-      <p class="text-gray-700 mb-4">Campinas/SP</p>
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition flex flex-col justify-between h-full" data-aos="fade-up" data-aos-delay="100">
+      <div>
+        <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
+        <h4 class="font-bold text-xl mb-2">Franco da Rocha - SP</h4>
+        <p class="text-gray-700 mb-2">Av. São Paulo, 1280 - Sala 7, Vila Bela</p>
+        <p class="text-gray-700 mb-4">07846-000</p>
+      </div>
       <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
-        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
-        <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
-      </a>
-    </div>
-
-    <!-- Unidade 3 -->
-    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
-      <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
-      <h4 class="font-bold text-xl mb-2">Santos</h4>
-      <p class="text-gray-700 mb-2">Av. da Praia, 789</p>
-      <p class="text-gray-700 mb-4">Santos/SP</p>
-      <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
-        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
+        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center justify-center space-x-2 mt-4">
         <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
       </a>
     </div>
 
     <!-- Atendimento Online -->
-    <div class="bg-green-50 border border-green-200 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
-      <i class="fas fa-video text-green-600 text-3xl mb-4"></i>
-      <h4 class="font-bold text-xl mb-2">Atendimento Online</h4>
-      <p class="text-gray-700 mb-4">Consultas por vídeo chamada com a mesma qualidade do atendimento presencial.</p>
+    <div class="bg-green-50 border border-green-200 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition flex flex-col justify-between h-full" data-aos="fade-up" data-aos-delay="300">
+      <div>
+        <i class="fas fa-video text-green-600 text-3xl mb-4"></i>
+        <h4 class="font-bold text-xl mb-2">Atendimento Online</h4>
+        <p class="text-gray-700 mb-4">Consultas por vídeo chamada com a mesma qualidade do atendimento presencial.</p>
+      </div>
       <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
-        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
+        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center justify-center space-x-2 mt-4">
         <i class="fab fa-whatsapp"></i> <span>Agendar Online</span>
+      </a>
+    </div>
+
+    <!-- Nova Unidade -->
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition flex flex-col justify-between h-full" data-aos="fade-up" data-aos-delay="200">
+      <div>
+        <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
+        <h4 class="font-bold text-xl mb-2">Nova Unidade</h4>
+        <p class="text-gray-700 mb-2 font-semibold text-red-600">Em breve!</p>
+        <p class="text-gray-700 mb-4">Localização ainda não divulgada</p>
+      </div>
+      <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as novas unidades." target="_blank"
+        class="bg-gray-400 cursor-not-allowed text-white px-4 py-2 rounded-full font-semibold inline-flex items-center justify-center space-x-2 opacity-50 mt-4">
+        <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
       </a>
     </div>
 
   </div>
 </section>
+
+
+
 
 
 <footer class="bg-green-700 text-white py-10">
@@ -411,17 +506,20 @@
 </footer>
 
 
+<!-- Instagram -->
 <a href="https://www.instagram.com/juliananb.nutri/"
    target="_blank"
-   class="fixed bottom-24 right-6 bg-pink-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-40">
-   <i class="fab fa-instagram text-white text-2xl"></i>
+   class="fixed bottom-36 right-6 bg-pink-500 p-5 rounded-full shadow-2xl hover:scale-110 hover:shadow-pink-400/50 transition transform duration-300 animate-bounce z-40">
+   <i class="fab fa-instagram text-white text-3xl"></i>
 </a>
 
+<!-- WhatsApp -->
 <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais."
    target="_blank"
-   class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-40">
-   <i class="fab fa-whatsapp text-white text-2xl"></i>
+   class="fixed bottom-6 right-6 bg-green-500 p-5 rounded-full shadow-2xl hover:scale-110 hover:shadow-green-400/50 transition transform duration-300 animate-bounce z-40">
+   <i class="fab fa-whatsapp text-white text-3xl"></i>
 </a>
+
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
