@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header Responsivo</title>
+  <title>Nutricionista Juliana Nascimento</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-100">
+<body class="font-sans text-gray-800 bg-gray-50">
 
   <!-- Header -->
   <header class="fixed top-0 left-0 w-full bg-green-700 text-white shadow-md z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
       
       <!-- Logo -->
-      <div class="text-2xl font-bold cursor-pointer">
-        Logo / Início
-      </div>
+      <h1 class="text-xl md:text-2xl font-bold cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        Juliana Nascimento
+      </h1>
 
       <!-- Menu Desktop -->
-      <nav class="hidden md:flex space-x-8 text-lg font-medium">
+      <nav class="hidden md:flex space-x-8 text-sm md:text-base font-medium">
         <a href="#sobre" class="hover:text-green-300">Sobre</a>
         <a href="#servicos" class="hover:text-green-300">Serviços</a>
         <a href="#depoimentos" class="hover:text-green-300">Depoimentos</a>
@@ -27,10 +29,8 @@
       </nav>
 
       <!-- Botão Menu Mobile -->
-      <button id="menu-btn" class="md:hidden flex flex-col space-y-1 focus:outline-none">
-        <span class="w-6 h-0.5 bg-white"></span>
-        <span class="w-6 h-0.5 bg-white"></span>
-        <span class="w-6 h-0.5 bg-white"></span>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
 
@@ -44,38 +44,555 @@
     </div>
   </header>
 
-  <!-- Espaço para testar rolagem -->
-  <main class="pt-28 max-w-4xl mx-auto p-6">
-    <section id="sobre" class="py-20 border-b">
-      <h2 class="text-3xl font-bold mb-4">Sobre</h2>
-      <p>Conteúdo da seção sobre...</p>
-    </section>
-    <section id="servicos" class="py-20 border-b">
-      <h2 class="text-3xl font-bold mb-4">Serviços</h2>
-      <p>Conteúdo da seção serviços...</p>
-    </section>
-    <section id="depoimentos" class="py-20 border-b">
-      <h2 class="text-3xl font-bold mb-4">Depoimentos</h2>
-      <p>Conteúdo da seção depoimentos...</p>
-    </section>
-    <section id="blog" class="py-20 border-b">
-      <h2 class="text-3xl font-bold mb-4">Blog</h2>
-      <p>Conteúdo da seção blog...</p>
-    </section>
-    <section id="contato" class="py-20 border-b">
-      <h2 class="text-3xl font-bold mb-4">Contato</h2>
-      <p>Conteúdo da seção contato...</p>
-    </section>
-  </main>
 
-  <!-- Script para abrir/fechar menu -->
+  <!-- Script -->
   <script>
-    const btn = document.getElementById('menu-btn');
+    const btn = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu-mobile');
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
   </script>
+
+</body>
+</html>
+
+
+<section id="hero-slider" class="relative w-full h-screen overflow-hidden text-white flex justify-center items-center cursor-grab">
+    <div class="hero-slide w-full h-full relative">
+        <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-100 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(34,197,94,0.7), rgba(16,185,129,0.7)), url('/img/img1.jpg');">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl">
+                Alcance seus objetivos com uma alimentação saudável
+            </h2>
+            <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center">
+                Consultoria nutricional personalizada para emagrecimento, saúde e bem-estar.
+            </p>
+            <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
+                Fale no WhatsApp
+            </a>
+        </div>
+        <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(249,115,22,0.7), rgba(251,191,36,0.7)), url('/img/img2.jpg');">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl">
+                Transforme sua alimentação e sua vida ativa
+            </h2>
+            <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center">
+                Programas nutricionais adaptados ao seu estilo de vida e desempenho físico.
+            </p>
+            <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
+                Fale no WhatsApp
+            </a>
+        </div>
+        <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(59,130,246,0.6), rgba(129,140,248,0.6)), url('/img/img3.jpg');">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl">
+                Alcance o equilíbrio alimentar e emocional
+            </h2>
+            <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center">
+                Acompanhamento contínuo para resultados duradouros e hábitos sustentáveis.
+            </p>
+            <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
+                Fale no WhatsApp
+            </a>
+        </div>
+    </div>
+    <div class="absolute bottom-10 flex space-x-3">
+        <button class="dot w-4 h-4 rounded-full bg-white opacity-100 transition"></button>
+        <button class="dot w-4 h-4 rounded-full bg-white opacity-50 transition"></button>
+        <button class="dot w-4 h-4 rounded-full bg-white opacity-50 transition"></button>
+    </div>
+</section>
+
+<section id="sobre" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <img src="/img/Capturar.JPG" alt="Foto da Nutricionista Juliana Nascimento" class="w-64 h-64 rounded-full shadow-lg object-cover" data-aos="fade-right">
+            <div data-aos="fade-left">
+                <h3 class="text-3xl font-bold mb-4">Sobre a Nutricionista Juliana</h3>
+                <p class="mb-4 text-gray-700">Com formação em Nutrição e especialização em nutrição clínica e esportiva, meu objetivo é ajudar você a conquistar uma relação saudável e prazerosa com a comida. Acredito que a alimentação deve ser prática e se adequar ao seu estilo de vida, sem restrições desnecessárias.</p>
+                <p class="text-gray-700">Em meus atendimentos, busco oferecer um acompanhamento completo, com planos alimentares individualizados e suporte contínuo para que você alcance seus resultados de forma sustentável. Meu CRN é 123456.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="servicos" class="py-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+        <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">Serviços Oferecidos</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-desktop text-4xl text-green-600"></i>
+                <h4 class="text-xl font-semibold mt-4">Consultas Online</h4>
+                <p class="mt-2 text-gray-600">Atendimento personalizado, com plano alimentar e suporte via WhatsApp, no conforto da sua casa.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-heartbeat text-4xl text-green-600"></i>
+                <h4 class="text-xl font-semibold mt-4">Nutrição Clínica </h4>
+                <p class="mt-2 text-gray-600">Planos para emagrecimento, ganho de massa muscular, controle de doenças e melhoria da saúde geral.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-file-alt text-4xl text-green-600"></i>
+                <h4 class="text-xl font-semibold mt-4">Planos Alimentares Personalizados</h4>
+                <p class="mt-2 text-gray-600">Cardápios ajustados aos seus objetivos, preferências e rotina, com receitas práticas e saborosas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto text-center px-6">
+        <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">Dicas e Receitas no Blog</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=2053&auto=format&fit=crop" alt="Post de Blog 1" class="w-full h-48 object-cover rounded-t-xl">
+                <div class="p-6 text-left">
+                    <h4 class="text-xl font-semibold mb-2">5 Receitas de Saladas Diferentes</h4>
+                    <p class="text-gray-600 text-sm mb-4">Descubra como deixar suas saladas mais interessantes e nutritivas com estas receitas fáceis.</p>
+                    <a href="/saladas.html" class="text-green-600 font-semibold hover:underline">Leia Mais →</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                <img src="/img/Mitoseverdades.png" alt="Post de Blog 2" class="w-full h-48 object-cover rounded-t-xl">
+                <div class="p-6 text-left">
+                    <h4 class="text-xl font-semibold mb-2">Mitos e Verdades sobre Dietas</h4>
+                    <p class="text-gray-600 text-sm mb-4">Desmistifique as informações mais comuns sobre nutrição e emagrecimento.</p>
+                    <a href="/mitos-dietas.html" class="text-green-600 font-semibold hover:underline">Leia Mais →</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                <img src="/img/leiarotulos.png" alt="Post de Blog 3" class="w-full h-48 object-cover rounded-t-xl">
+                <div class="p-6 text-left">
+                    <h4 class="text-xl font-semibold mb-2">Como Ler Rótulos de Alimentos</h4>
+                    <p class="text-gray-600 text-sm mb-4">Aprenda a fazer escolhas mais conscientes no supermercado com este guia prático.</p>
+                    <a href="/rotulos.html" class="text-green-600 font-semibold hover:underline">Leia Mais →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="depoimentos" class="py-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+        <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">O que dizem meus clientes</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="zoom-in">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 1" class="w-20 h-20 mx-auto rounded-full mb-4 object-cover">
+                <p class="italic text-gray-700">"Melhorei minha alimentação e perdi peso de forma saudável. O acompanhamento da Juliana foi essencial para isso!"</p>
+                <div class="mt-4 flex justify-center text-yellow-400">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h4 class="mt-2 font-semibold text-gray-800">João P.</h4>
+            </div>
+            <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente 2" class="w-20 h-20 mx-auto rounded-full mb-4 object-cover">
+                <p class="italic text-gray-700">"Consultoria incrível! Recebi cardápios deliciosos e fáceis de seguir. Recomendo de olhos fechados!"</p>
+                <div class="mt-4 flex justify-center text-yellow-400">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h4 class="mt-2 font-semibold text-gray-800">Maria L.</h4>
+            </div>
+            <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 3" class="w-20 h-20 mx-auto rounded-full mb-4 object-cover">
+                <p class="italic text-gray-700">"O suporte via WhatsApp faz toda a diferença. Me senti sempre amparada. O resultado veio de forma natural."</p>
+                <div class="mt-4 flex justify-center text-yellow-400">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h4 class="mt-2 font-semibold text-gray-800">Ana C.</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="faq" class="py-20 bg-gray-100">
+  <div class="max-w-4xl mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">
+      Perguntas Frequentes
+    </h3>
+    <div class="space-y-4">
+
+      <!-- FAQ Item -->
+      <details class="bg-white border rounded-lg shadow group" data-aos="fade-up">
+        <summary
+          class="cursor-pointer px-6 py-4 font-semibold text-lg flex justify-between items-center list-none"
+        >
+          Qual o valor da consulta?
+          <i
+            class="fas fa-chevron-down text-sm transition-transform duration-300 group-open:rotate-180"
+          ></i>
+        </summary>
+        <div class="px-6 pb-4 text-gray-600">
+          O valor da consulta varia de acordo com o plano de acompanhamento
+          escolhido. Entre em contato pelo WhatsApp para saber mais sobre as opções
+          disponíveis.
+        </div>
+      </details>
+
+      <!-- FAQ Item -->
+      <details
+        class="bg-white border rounded-lg shadow group"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <summary
+          class="cursor-pointer px-6 py-4 font-semibold text-lg flex justify-between items-center list-none"
+        >
+          É possível ter atendimento online?
+          <i
+            class="fas fa-chevron-down text-sm transition-transform duration-300 group-open:rotate-180"
+          ></i>
+        </summary>
+        <div class="px-6 pb-4 text-gray-600">
+          Sim, realizo consultas online por videochamada. O acompanhamento é tão
+          completo quanto o presencial, com todas as etapas necessárias para o seu
+          sucesso.
+        </div>
+      </details>
+
+      <!-- FAQ Item -->
+      <details
+        class="bg-white border rounded-lg shadow group"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <summary
+          class="cursor-pointer px-6 py-4 font-semibold text-lg flex justify-between items-center list-none"
+        >
+          Quanto tempo dura a consulta?
+          <i
+            class="fas fa-chevron-down text-sm transition-transform duration-300 group-open:rotate-180"
+          ></i>
+        </summary>
+        <div class="px-6 pb-4 text-gray-600">
+          A primeira consulta tem uma duração média de 1 hora, enquanto as de
+          retorno duram cerca de 30 a 40 minutos, para que possamos avaliar o
+          progresso e fazer ajustes.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div id="modal-isca" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+  <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-lg w-full text-center relative" data-aos="zoom-in">
+    <!-- Botão Fechar -->
+    <button id="close-modal" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-2xl font-bold">
+      &times;
+    </button>
+
+    <!-- Imagem destaque -->
+    <img src="/img/Presente.png"
+      alt="Guia Exclusivo" class="w-28 h-28 mx-auto mb-6 rounded-full object-cover shadow-md">
+
+    <!-- Título e Texto -->
+    <h3 class="text-2xl font-bold mb-3 text-gray-800">🎁 Conteúdo Exclusivo!</h3>
+    <p class="text-gray-600 mb-6">
+      Receba dicas, novidades e materiais gratuitos diretamente no
+      <span class="font-semibold text-green-600">WhatsApp</span> ou acompanhe nossas atualizações no
+      <span class="font-semibold text-pink-500">Instagram</span>.
+    </p>
+
+    <!-- Botões de Ação -->
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
+        class="flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition w-full">
+        <i class="fab fa-whatsapp text-xl"></i> Falar no WhatsApp
+      </a>
+      <a href="https://www.instagram.com/juliananb.nutri/" target="_blank"
+        class="flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition w-full">
+        <i class="fab fa-instagram text-xl"></i> Ver Instagram
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<section id="contato" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6 text-center mb-12">
+    <h3 class="text-3xl font-bold mb-4">Agende sua consulta!</h3>
+    <p class="text-gray-700">Escolha o local mais próximo ou opte pelo atendimento online:</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- Unidade 1 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up">
+      <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
+      <h4 class="font-bold text-xl mb-2">São Paulo - Centro</h4>
+      <p class="text-gray-700 mb-2">Rua das Flores, 123</p>
+      <p class="text-gray-700 mb-4">São Paulo/SP</p>
+      <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
+        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
+        <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- Unidade 2 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
+      <h4 class="font-bold text-xl mb-2">Campinas</h4>
+      <p class="text-gray-700 mb-2">Av. Brasil, 456</p>
+      <p class="text-gray-700 mb-4">Campinas/SP</p>
+      <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
+        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
+        <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- Unidade 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-map-marker-alt text-green-600 text-3xl mb-4"></i>
+      <h4 class="font-bold text-xl mb-2">Santos</h4>
+      <p class="text-gray-700 mb-2">Av. da Praia, 789</p>
+      <p class="text-gray-700 mb-4">Santos/SP</p>
+      <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
+        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
+        <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- Atendimento Online -->
+    <div class="bg-green-50 border border-green-200 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-video text-green-600 text-3xl mb-4"></i>
+      <h4 class="font-bold text-xl mb-2">Atendimento Online</h4>
+      <p class="text-gray-700 mb-4">Consultas por vídeo chamada com a mesma qualidade do atendimento presencial.</p>
+      <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." target="_blank"
+        class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-500 transition inline-flex items-center space-x-2">
+        <i class="fab fa-whatsapp"></i> <span>Agendar Online</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="bg-green-700 text-white py-10">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+    
+    <!-- Sobre -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Juliana Nascimento</h4>
+      <p class="text-green-100 text-sm">
+        Nutricionista e Consultora em Alimentação.
+      </p>
+    </div>
+    
+    <!-- Links Úteis -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Links Úteis</h4>
+      <ul class="space-y-2">
+        <li><a href="#sobre" class="hover:text-green-300 transition-colors duration-300">Sobre</a></li>
+        <li><a href="#servicos" class="hover:text-green-300 transition-colors duration-300">Serviços</a></li>
+        <li><a href="#blog" class="hover:text-green-300 transition-colors duration-300">Blog</a></li>
+      </ul>
+    </div>
+    
+    <!-- Redes Sociais -->
+    <div>
+      <h4 class="font-bold text-lg mb-4">Redes Sociais</h4>
+      <div class="flex flex-wrap space-x-4">
+        <a href="https://www.instagram.com/juliananb.nutri/" target="_blank" class="text-white hover:text-green-300 transition-colors duration-300 text-2xl">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20suas%20consultorias." target="_blank" class="text-white hover:text-green-300 transition-colors duration-300 text-2xl">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Direitos Autorais -->
+  <div class="text-center mt-8 text-green-200 text-sm">
+    © 2025 Juliana Nascimento. Todos os direitos reservados.
+  </div>
+</footer>
+
+
+<a href="https://www.instagram.com/juliananb.nutri/"
+   target="_blank"
+   class="fixed bottom-24 right-6 bg-pink-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-40">
+   <i class="fab fa-instagram text-white text-2xl"></i>
+</a>
+
+<a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais."
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-40">
+   <i class="fab fa-whatsapp text-white text-2xl"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Slider Hero
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+    function showSlide(index) {
+        slides.forEach((slide, i) => slide.style.opacity = i === index ? '1' : '0');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('opacity-100', i === index);
+            dot.classList.toggle('opacity-50', i !== index);
+        });
+    }
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { current = i; showSlide(current); }));
+    let slideInterval = setInterval(() => { current = (current + 1) % slides.length; showSlide(current); }, 5000);
+    showSlide(current);
+
+    // FAQ
+    document.querySelectorAll(".faq-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            content.classList.toggle("open");
+            icon.classList.toggle("rotate-180");
+        });
+    });
+
+    // Pop-up Isca Digital
+    const modalIsca = document.getElementById('modal-isca');
+    const closeModalBtn = document.getElementById('close-modal');
+    const formLead = document.getElementById('form-lead');
+    const messageLead = document.getElementById('message-lead');
+
+    setTimeout(() => {
+        modalIsca.classList.remove('hidden');
+    }, 5000); // Aparece após 5 segundos
+
+    closeModalBtn.addEventListener('click', () => {
+        modalIsca.classList.add('hidden');
+    });
+
+    formLead.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Simular envio de dados
+        console.log('E-mail capturado:', document.getElementById('email-lead').value);
+        
+        // Exibe a mensagem de sucesso e esconde o formulário
+        formLead.classList.add('hidden');
+        messageLead.classList.remove('hidden');
+
+        // Fecha o modal após 3 segundos
+        setTimeout(() => {
+            modalIsca.classList.add('hidden');
+        }, 3000);
+    });
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('hero-slider');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    // --- Variáveis para o arraste (swipe) ---
+    let isDragging = false;
+    let startPosX = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID;
+
+    // Função para mostrar o slide correto e atualizar os pontos
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('opacity-100');
+            slide.classList.add('opacity-0');
+            dots[i].classList.remove('opacity-100');
+            dots[i].classList.add('opacity-50');
+        });
+
+        slides[index].classList.remove('opacity-0');
+        slides[index].classList.add('opacity-100');
+        dots[index].classList.remove('opacity-50');
+        dots[index].classList.add('opacity-100');
+        currentSlide = index;
+    }
+
+    // Funções para ir para o próximo e anterior
+    function nextSlide() {
+        const newIndex = (currentSlide + 1) % totalSlides;
+        showSlide(newIndex);
+    }
+
+    function prevSlide() {
+        const newIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(newIndex);
+    }
+    
+    // Adiciona evento de clique nos pontos de navegação
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // --- Lógica do Arraste ---
+    
+    // Adiciona os event listeners para mouse e toque
+    slider.addEventListener('mousedown', dragStart);
+    slider.addEventListener('touchstart', dragStart, { passive: true });
+    
+    slider.addEventListener('mouseup', dragEnd);
+    slider.addEventListener('mouseleave', dragEnd);
+    slider.addEventListener('touchend', dragEnd);
+    
+    slider.addEventListener('mousemove', drag);
+    slider.addEventListener('touchmove', drag, { passive: true });
+
+    function dragStart(event) {
+        isDragging = true;
+        startPosX = getPositionX(event);
+        slider.classList.remove('cursor-grab');
+        slider.classList.add('cursor-grabbing');
+        // Cancela qualquer animação em andamento
+        cancelAnimationFrame(animationID);
+    }
+
+    function drag(event) {
+        if (isDragging) {
+            const currentPosition = getPositionX(event);
+            currentTranslate = prevTranslate + currentPosition - startPosX;
+        }
+    }
+
+    function dragEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const movedBy = currentTranslate - prevTranslate;
+
+        // Se o arraste for maior que 50px, troca o slide
+        if (movedBy < -50) {
+            nextSlide();
+        } else if (movedBy > 50) {
+            prevSlide();
+        }
+
+        slider.classList.add('cursor-grab');
+        slider.classList.remove('cursor-grabbing');
+        
+        // Reseta as variáveis de translação
+        currentTranslate = 0;
+        prevTranslate = 0;
+    }
+
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+    
+    // Inicia o slide show na primeira posição
+    showSlide(0);
+
+    // Opcional: Troca de slide automática a cada 5 segundos
+    // Se não quiser, pode remover ou comentar esta linha
+    setInterval(nextSlide, 5000);
+});
+
+
+
+</script>
 
 </body>
 </html>
