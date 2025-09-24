@@ -78,49 +78,74 @@ html, body {
 
 
 
+<section id="hero-slider" class="relative w-full h-screen overflow-hidden text-white flex justify-center items-center">
+  <div class="hero-slide w-full h-full relative">
+    <!-- SLIDE 1 -->
+    <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-100 bg-cover bg-center" style="background-image:url('/img/img1.jpg')">
+      <!-- overlay preto suave -->
+      <div class="absolute inset-0 bg-black/40"></div>
 
-<section id="hero-slider" class="relative w-full h-screen overflow-hidden text-white flex justify-center items-center cursor-grab">
-    <div class="hero-slide w-full h-full relative">
-        <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-100 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(34,197,94,0.7), rgba(16,185,129,0.7)), url('/img/img1.jpg');">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl">
-                Alcance seus objetivos com uma alimentação saudável
-            </h2>
-            <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center">
-                Consultoria nutricional personalizada para emagrecimento, saúde e bem-estar.
-            </p>
-            <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
-                Fale no WhatsApp
-            </a>
-        </div>
-        <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(249,115,22,0.7), rgba(251,191,36,0.7)), url('/img/img2.jpg');">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl">
-                Transforme sua alimentação e sua vida ativa
-            </h2>
-            <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center">
-                Programas nutricionais adaptados ao seu estilo de vida e desempenho físico.
-            </p>
-            <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
-                Fale no WhatsApp
-            </a>
-        </div>
-        <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(59,130,246,0.6), rgba(129,140,248,0.6)), url('/img/img3.jpg');">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center max-w-4xl">
-                Alcance o equilíbrio alimentar e emocional
-            </h2>
-            <p class="text-md md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl text-center">
-                Acompanhamento contínuo para resultados duradouros e hábitos sustentáveis.
-            </p>
-            <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition transform hover:scale-105">
-                Fale no WhatsApp
-            </a>
-        </div>
+      <div class="relative z-10 text-center animate-fadeInUp">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 max-w-4xl drop-shadow-lg">
+          Alcance seus objetivos com uma alimentação saudável
+        </h1>
+        <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl mx-auto drop-shadow-lg">
+          Consultoria nutricional personalizada para emagrecimento, saúde e bem-estar.
+        </p>
+        <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." 
+           class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition">
+          Fale no WhatsApp
+        </a>
+      </div>
     </div>
-    <div class="absolute bottom-10 flex space-x-3">
-        <button class="dot w-4 h-4 rounded-full bg-white opacity-100 transition"></button>
-        <button class="dot w-4 h-4 rounded-full bg-white opacity-50 transition"></button>
-        <button class="dot w-4 h-4 rounded-full bg-white opacity-50 transition"></button>
+
+    <!-- SLIDE 2 -->
+    <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image:url('/img/img2.jpg')">
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="relative z-10 text-center animate-fadeInUp">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 max-w-4xl drop-shadow-lg">
+          Transforme sua alimentação e sua vida ativa
+        </h2>
+        <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl mx-auto drop-shadow-lg">
+          Programas nutricionais adaptados ao seu estilo de vida e desempenho físico.
+        </p>
+        <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." 
+           class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition">
+          Fale no WhatsApp
+        </a>
+      </div>
     </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide absolute inset-0 w-full h-full flex flex-col justify-center items-center px-6 transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center" style="background-image:url('/img/img3.jpg')">
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="relative z-10 text-center animate-fadeInUp">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 max-w-4xl drop-shadow-lg">
+          Alcance o equilíbrio alimentar e emocional
+        </h2>
+        <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-2xl mx-auto drop-shadow-lg">
+          Acompanhamento contínuo para resultados duradouros e hábitos sustentáveis.
+        </p>
+        <a href="https://wa.me/5511976603054?text=Olá,%20Juliana!%20Gostaria%20de%20saber%20mais%20sobre%20as%20suas%20consultorias%20nutricionais." 
+           class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition">
+          Fale no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOTS -->
+  <div class="absolute bottom-10 flex space-x-3 z-20">
+    <button class="dot w-4 h-4 rounded-full bg-white opacity-100 transition" aria-label="Slide 1"></button>
+    <button class="dot w-4 h-4 rounded-full bg-white opacity-50 transition" aria-label="Slide 2"></button>
+    <button class="dot w-4 h-4 rounded-full bg-white opacity-50 transition" aria-label="Slide 3"></button>
+  </div>
 </section>
+
+
+
 
 
 <section class="bg-green-100 py-12 mt-20">
@@ -720,6 +745,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 </script>
+
+
 
 </body>
 </html>
